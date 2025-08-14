@@ -1,0 +1,450 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #f8f9fa;
+  --secondary-foreground: #000000;
+  --muted: #f1f3f4;
+  --muted-foreground: #5f6368;
+  --accent: #e8eaed;
+  --accent-foreground: #000000;
+  --destructive: #d93025;
+  --destructive-foreground: #ffffff;
+  --border: #dadce0;
+  --input: transparent;
+  --input-background: #ffffff;
+  --switch-background: #dadce0;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --ring: #1a73e8;
+  --chart-1: #1a73e8;
+  --chart-2: #34a853;
+  --chart-3: #fbbc04;
+  --chart-4: #ea4335;
+  --chart-5: #9aa0a6;
+  --radius: 0;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f8f9fa;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #dadce0;
+  --sidebar-ring: #1a73e8;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #000000;
+  --card-foreground: #ffffff;
+  --popover: #000000;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #ffffff;
+  --muted: #2d2d2d;
+  --muted-foreground: #a8a8a8;
+  --accent: #3d3d3d;
+  --accent-foreground: #ffffff;
+  --destructive: #f28b82;
+  --destructive-foreground: #000000;
+  --border: #5f6368;
+  --input: #2d2d2d;
+  --ring: #8ab4f8;
+  --chart-1: #8ab4f8;
+  --chart-2: #81c995;
+  --chart-3: #fdd663;
+  --chart-4: #f28b82;
+  --chart-5: #9aa0a6;
+  --sidebar: #000000;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #8ab4f8;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #1f1f1f;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #5f6368;
+  --sidebar-ring: #8ab4f8;
+}
+
+/* High Contrast Mode - AA Compliant */
+.high-contrast {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f0f0;
+  --secondary-foreground: #000000;
+  --muted: #e0e0e0;
+  --muted-foreground: #000000;
+  --accent: #0066cc;
+  --accent-foreground: #ffffff;
+  --border: #000000;
+  --input-background: #ffffff;
+  --ring: #0066cc;
+}
+
+/* Neurodivergent Mode */
+.neurodivergent-mode {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --muted-foreground: #333333;
+  --border: #cccccc;
+  --radius: 8px;
+}
+
+.neurodivergent-mode * {
+  font-family: 'Inter', 'Arial', sans-serif !important;
+  line-height: 1.8 !important;
+}
+
+.neurodivergent-mode h1, 
+.neurodivergent-mode h2, 
+.neurodivergent-mode h3 {
+  font-weight: 600 !important;
+  margin-bottom: 2rem !important;
+  color: #000000 !important;
+}
+
+.neurodivergent-mode p {
+  font-size: 1.1rem !important;
+  margin-bottom: 2rem !important;
+  max-width: 65ch;
+  color: #1a1a1a !important;
+}
+
+/* Reduced Motion */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* Focus styles for better accessibility */
+  *:focus {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* Skip link for screen readers */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    border: 2px solid #ffffff;
+  }
+
+  .skip-link:focus {
+    top: 6px;
+  }
+
+  /* Improve button contrast */
+  button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+    cursor: pointer;
+  }
+
+  /* Better link visibility */
+  a:not([class]) {
+    color: #1a73e8;
+    text-decoration: underline;
+  }
+
+  a:not([class]):hover,
+  a:not([class]):focus {
+    text-decoration: none;
+    color: #1557b0;
+  }
+}
+
+/**
+ * Editorial typography system - High Contrast Enhanced
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 3.5rem;
+      font-weight: var(--font-weight-light);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      color: #000000;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: var(--font-weight-light);
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      margin-bottom: 1.25rem;
+      color: #000000;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      color: #000000;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+      color: #000000;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      max-width: 75ch;
+      color: #000000;
+    }
+
+    label {
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      color: #000000;
+    }
+
+    button {
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      letter-spacing: 0.015em;
+    }
+
+    input {
+      font-size: 1rem;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.6;
+      color: #000000;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+/* Editorial dividers - High Contrast */
+.editorial-divider {
+  width: 100%;
+  height: 1px;
+  background: #dadce0;
+  margin: 2rem 0;
+}
+
+.editorial-divider-short {
+  width: 4rem;
+  height: 1px;
+  background: #000000;
+  margin: 1rem 0;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* Animations and transitions respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode detection */
+@media (prefers-contrast: high) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --border: #000000;
+    --muted-foreground: #000000;
+  }
+}
+
+/* Ensure text remains readable in all modes */
+.text-muted-foreground {
+  color: #5f6368 !important;
+}
+
+.text-foreground {
+  color: #000000 !important;
+}
+
+/* Button improvements for better contrast */
+.bg-foreground {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.bg-muted {
+  background-color: #f1f3f4 !important;
+  color: #000000 !important;
+}
+
+.border-border {
+  border-color: #dadce0 !important;
+}
+
+/* Navbar specific improvements */
+.bg-background {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Ensure footer has proper contrast */
+.bg-foreground.text-background {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Form elements contrast */
+input, textarea, select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #dadce0 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #1a73e8 !important;
+  outline: 2px solid #1a73e8 !important;
+  outline-offset: 0px !important;
+}
+
+/* Card elements */
+.bg-card {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #dadce0 !important;
+}
+
+/* Accessibility panel improvements */
+.fixed.bottom-4.right-4 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
