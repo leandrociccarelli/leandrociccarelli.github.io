@@ -1,0 +1,6 @@
+# Título e descrição do seu site
+title: O Título do Meu Site
+description: Uma breve descrição sobre o que é o site.
+
+# Escolhendo um tema simples para começar
+theme: jekyll-theme-minimal
